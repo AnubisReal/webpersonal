@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: anubisreal-app
     ports:
-      - "3000:4321"  # Puerto 3000 en el host, 4321 en el contenedor
+      - "8180:4321"  # Puerto 8080 en el host, 4321 en el contenedor
     restart: unless-stopped
     environment:
       - NODE_ENV=production
