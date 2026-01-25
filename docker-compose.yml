@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  anubisreal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: anubisreal-app
+    ports:
+      - "3000:4321"  # Puerto 3000 en el host, 4321 en el contenedor
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=4321

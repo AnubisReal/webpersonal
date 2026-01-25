@@ -1,0 +1,536 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AnubisReal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0B0C0E;
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+        }
+
+        #socialCards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-header h3 {
+            font-size: 15px;
+            color: #47C675;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        label {
+            display: block;
+            font-size: 10px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        /* ESTILOS CRÍTICOS PARA LOS INPUTS */
+        input[type="text"],
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(20, 20, 25, 0.8) !important;
+            border: 2px solid rgba(255, 255, 255, 0.15) !important;
+            border-radius: 10px !important;
+            color: #ffffff !important;
+            font-size: 14px !important;
+            font-family: 'Inter', sans-serif !important;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none !important;
+            border-color: #47C675 !important;
+            background: rgba(20, 20, 25, 0.9) !important;
+            box-shadow: 0 0 0 3px rgba(71, 198, 117, 0.2) !important;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        /* ESTILOS PARA INPUT DE ARCHIVO */
+        input[type="file"] {
+            display: none;
+        }
+
+        label[for^="file-"]:hover {
+            background: rgba(71, 198, 117, 0.3) !important;
+        }
+
+        .save-btn {
+            padding: 14px 32px;
+            background: #47C675;
+            color: #0B0C0E;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .save-btn:hover {
+            background: #3ab563;
+            transform: translateY(-2px);
+        }
+
+        .add-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .add-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        #videosList {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .video-item {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+        }
+
+        .video-item input {
+            flex: 1;
+        }
+
+        .delete-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 59, 48, 0.2);
+            color: #ff3b30;
+            border: 2px solid rgba(255, 59, 48, 0.3);
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .delete-btn:hover {
+            background: rgba(255, 59, 48, 0.3);
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 16px 28px;
+            background: rgba(71, 198, 117, 0.95);
+            color: #fff;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            pointer-events: none;
+        }
+
+        .notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard</h1>
+            <button id="saveBtn" class="save-btn">Guardar Cambios</button>
+        </header>
+
+        <section class="section">
+            <h2>Redes Sociales</h2>
+            <div id="socialCards"></div>
+        </section>
+
+        <section class="section">
+            <h2>Spotify</h2>
+            <div class="form-group" style="display: flex; align-items: center; gap: 12px;">
+                <label style="min-width: 100px; margin-bottom: 0;">URL del Embed</label>
+                <input type="text" id="spotifyUrl" placeholder="https://open.spotify.com/embed/..." style="flex: 1; padding: 10px 12px; background: rgba(20, 20, 25, 0.8) !important; border: 1.5px solid rgba(255, 255, 255, 0.2) !important; border-radius: 8px !important; color: #ffffff !important; font-size: 13px !important; font-family: 'Inter', sans-serif !important;">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Videos de YouTube</h2>
+            <div id="videosList"></div>
+            <button id="addVideoBtn" class="add-btn">+ Agregar Video</button>
+        </section>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script>
+        let data = {};
+
+        async function loadData() {
+            // Intentar cargar desde localStorage primero
+            const localData = localStorage.getItem('anubisreal-data');
+            if (localData) {
+                data = JSON.parse(localData);
+                console.log('Datos cargados desde localStorage');
+            } else {
+                // Si no hay datos locales, cargar desde el servidor
+                const response = await fetch('/data.json');
+                data = await response.json();
+            }
+            
+            // Asegurar que todos los cards tengan el campo profileImage
+            if (data.socialCards) {
+                data.socialCards = data.socialCards.map(card => ({
+                    ...card,
+                    profileImage: card.profileImage || ''
+                }));
+            }
+            
+            console.log('Datos cargados:', data);
+            renderSocialCards();
+            renderSpotify();
+            renderVideos();
+        }
+
+        function renderSocialCards() {
+            const container = document.getElementById('socialCards');
+            container.innerHTML = data.socialCards.map((card, index) => `
+                <div class="card">
+                    <div class="card-header">
+                        <h3>${card.platform}</h3>
+                    </div>
+                    <div class="form-group" style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <label style="min-width: 80px; margin-bottom: 0; font-size: 10px;">Imagen</label>
+                        <div style="flex: 1; display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: ${card.profileImage ? `url(${card.profileImage})` : 'linear-gradient(135deg, rgba(71, 198, 117, 0.3), rgba(71, 198, 117, 0.1))'};  background-size: cover; background-position: center; border: 2px solid rgba(255, 255, 255, 0.2); overflow: hidden;"></div>
+                            <input type="file" 
+                                   accept="image/*"
+                                   data-index="${index}" 
+                                   data-field="profileImage"
+                                   id="file-${index}"
+                                   style="display: none;">
+                            <label for="file-${index}" style="padding: 8px 16px; background: rgba(71, 198, 117, 0.2); color: #47C675; border: 1px solid rgba(71, 198, 117, 0.3); border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; margin: 0; text-transform: none; letter-spacing: 0;">Seleccionar</label>
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <label style="min-width: 80px; margin-bottom: 0;">Usuario</label>
+                        <input type="text" 
+                               value="${card.username}" 
+                               data-index="${index}" 
+                               data-field="username" 
+                               placeholder="usuario"
+                               style="flex: 1; padding: 10px 12px; background: rgba(20, 20, 25, 0.8) !important; border: 1.5px solid rgba(255, 255, 255, 0.2) !important; border-radius: 8px !important; color: #ffffff !important; font-size: 13px !important; font-family: 'Inter', sans-serif !important; transition: all 0.3s ease;">
+                    </div>
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <label style="min-width: 60px; margin-bottom: 0; font-size: 9px; white-space: nowrap;">Seguidores</label>
+                            <input type="text" 
+                                   value="${card.followers}" 
+                                   data-index="${index}" 
+                                   data-field="followers" 
+                                   placeholder="0"
+                                   style="width: 100%; padding: 10px 8px; background: rgba(20, 20, 25, 0.8) !important; border: 1.5px solid rgba(255, 255, 255, 0.2) !important; border-radius: 8px !important; color: #ffffff !important; font-size: 13px !important; font-family: 'Inter', sans-serif !important; transition: all 0.3s ease;">
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <label style="min-width: 60px; margin-bottom: 0; font-size: 9px; white-space: nowrap;">Siguiendo</label>
+                            <input type="text" 
+                                   value="${card.following}" 
+                                   data-index="${index}" 
+                                   data-field="following" 
+                                   placeholder="0"
+                                   style="width: 100%; padding: 10px 8px; background: rgba(20, 20, 25, 0.8) !important; border: 1.5px solid rgba(255, 255, 255, 0.2) !important; border-radius: 8px !important; color: #ffffff !important; font-size: 13px !important; font-family: 'Inter', sans-serif !important; transition: all 0.3s ease;">
+                        </div>
+                    </div>
+                    <div class="form-group" style="display: flex; align-items: center; gap: 12px;">
+                        <label style="min-width: 80px; margin-bottom: 0;">URL</label>
+                        <input type="text" 
+                               value="${card.url}" 
+                               data-index="${index}" 
+                               data-field="url" 
+                               placeholder="https://..."
+                               style="flex: 1; padding: 10px 12px; background: rgba(20, 20, 25, 0.8) !important; border: 1.5px solid rgba(255, 255, 255, 0.2) !important; border-radius: 8px !important; color: #ffffff !important; font-size: 13px !important; font-family: 'Inter', sans-serif !important; transition: all 0.3s ease;">
+                    </div>
+                </div>
+            `).join('');
+
+            // Event listeners para inputs de texto
+            container.querySelectorAll('input[type="text"]').forEach(input => {
+                input.addEventListener('input', (e) => {
+                    const index = e.target.dataset.index;
+                    const field = e.target.dataset.field;
+                    data.socialCards[index][field] = e.target.value;
+                });
+                
+                input.addEventListener('focus', (e) => {
+                    e.target.style.borderColor = '#47C675';
+                    e.target.style.boxShadow = '0 0 0 3px rgba(71, 198, 117, 0.15)';
+                    e.target.style.background = 'rgba(20, 20, 25, 0.95)';
+                });
+                
+                input.addEventListener('blur', (e) => {
+                    e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                    e.target.style.boxShadow = 'none';
+                    e.target.style.background = 'rgba(20, 20, 25, 0.8)';
+                });
+                
+                input.addEventListener('mouseenter', (e) => {
+                    if (document.activeElement !== e.target) {
+                        e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                    }
+                });
+                
+                input.addEventListener('mouseleave', (e) => {
+                    if (document.activeElement !== e.target) {
+                        e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                    }
+                });
+            });
+            
+            // Event listeners para inputs de archivo (imágenes)
+            container.querySelectorAll('input[type="file"]').forEach(input => {
+                input.addEventListener('change', (e) => {
+                    const index = e.target.dataset.index;
+                    const file = e.target.files[0];
+                    
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                            data.socialCards[index].profileImage = event.target.result;
+                            renderSocialCards();
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+            });
+        }
+
+        function renderSpotify() {
+            const spotifyInput = document.getElementById('spotifyUrl');
+            spotifyInput.value = data.spotify.embedUrl;
+            
+            spotifyInput.addEventListener('input', (e) => {
+                data.spotify.embedUrl = e.target.value;
+            });
+            
+            spotifyInput.addEventListener('focus', (e) => {
+                e.target.style.borderColor = '#47C675';
+                e.target.style.boxShadow = '0 0 0 3px rgba(71, 198, 117, 0.15)';
+                e.target.style.background = 'rgba(20, 20, 25, 0.95)';
+            });
+            
+            spotifyInput.addEventListener('blur', (e) => {
+                e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                e.target.style.boxShadow = 'none';
+                e.target.style.background = 'rgba(20, 20, 25, 0.8)';
+            });
+            
+            spotifyInput.addEventListener('mouseenter', (e) => {
+                if (document.activeElement !== e.target) {
+                    e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                }
+            });
+            
+            spotifyInput.addEventListener('mouseleave', (e) => {
+                if (document.activeElement !== e.target) {
+                    e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                }
+            });
+        }
+
+        function renderVideos() {
+            const container = document.getElementById('videosList');
+            container.innerHTML = data.videos.map((video, index) => `
+                <div class="video-item">
+                    <input type="text" 
+                           value="${video.url}" 
+                           data-index="${index}" 
+                           placeholder="URL del video de YouTube"
+                           style="flex: 1; padding: 14px 16px; background: rgba(20, 20, 25, 0.8) !important; border: 2px solid rgba(255, 255, 255, 0.15) !important; border-radius: 10px !important; color: #ffffff !important; font-size: 14px !important; font-family: 'Inter', sans-serif !important;">
+                    <button class="delete-btn" data-index="${index}">×</button>
+                </div>
+            `).join('');
+
+            container.querySelectorAll('input').forEach(input => {
+                input.addEventListener('input', (e) => {
+                    const index = e.target.dataset.index;
+                    data.videos[index].url = e.target.value;
+                });
+                
+                // Agregar eventos de focus
+                input.addEventListener('focus', (e) => {
+                    e.target.style.borderColor = '#47C675';
+                    e.target.style.boxShadow = '0 0 0 3px rgba(71, 198, 117, 0.2)';
+                });
+                
+                input.addEventListener('blur', (e) => {
+                    e.target.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+                    e.target.style.boxShadow = 'none';
+                });
+            });
+
+            container.querySelectorAll('.delete-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const index = e.target.dataset.index;
+                    data.videos.splice(index, 1);
+                    renderVideos();
+                });
+            });
+        }
+
+        document.getElementById('addVideoBtn').addEventListener('click', () => {
+            data.videos.push({
+                id: `video${Date.now()}`,
+                url: ''
+            });
+            renderVideos();
+        });
+
+        document.getElementById('saveBtn').addEventListener('click', async () => {
+            const notification = document.getElementById('notification');
+            notification.textContent = 'Guardando...';
+            notification.className = 'notification show';
+
+            try {
+                // Guardar en localStorage como backup
+                localStorage.setItem('anubisreal-data', JSON.stringify(data));
+                
+                // Intentar guardar en el servidor
+                const response = await fetch('/api/save-data', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    notification.textContent = '✓ Cambios guardados';
+                } else {
+                    // Si falla el servidor, al menos está en localStorage
+                    notification.textContent = '✓ Guardado localmente (refresca para ver cambios)';
+                    console.log('Datos guardados en localStorage:', data);
+                }
+            } catch (error) {
+                // Si hay error de conexión, guardar en localStorage
+                localStorage.setItem('anubisreal-data', JSON.stringify(data));
+                notification.textContent = '✓ Guardado localmente (refresca para ver cambios)';
+                console.log('Datos guardados en localStorage:', data);
+                console.log('Para usar estos datos, copia el JSON de la consola');
+            }
+
+            setTimeout(() => {
+                notification.className = 'notification';
+            }, 3000);
+        });
+
+        loadData();
+    </script>
+</body>
+</html>

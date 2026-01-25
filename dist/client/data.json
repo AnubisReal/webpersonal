@@ -1,0 +1,67 @@
+{
+  "socialCards": [
+    {
+      "id": "instagram",
+      "platform": "Instagram",
+      "username": "@badboybmb",
+      "followers": "16.6K",
+      "following": "2.7K",
+      "url": "https://instagram.com/badboybmb",
+      "icon": "instagram",
+      "profileImage": ""
+    },
+    {
+      "id": "tiktok",
+      "platform": "TikTok",
+      "username": "@anubisreal",
+      "followers": "45.2K",
+      "following": "180",
+      "url": "",
+      "icon": "tiktok",
+      "profileImage": ""
+    },
+    {
+      "id": "twitter",
+      "platform": "X (Twitter)",
+      "username": "@anubisreal",
+      "followers": "8.3K",
+      "following": "520",
+      "url": "",
+      "icon": "twitter",
+      "profileImage": ""
+    },
+    {
+      "id": "facebook",
+      "platform": "Facebook",
+      "username": "AnubisReal",
+      "followers": "3.2K",
+      "following": "150",
+      "url": "",
+      "icon": "facebook",
+      "profileImage": ""
+    },
+    {
+      "id": "youtube",
+      "platform": "YouTube",
+      "username": "AnubisReal",
+      "followers": "1.8K",
+      "following": "89",
+      "url": "",
+      "icon": "youtube",
+      "profileImage": ""
+    }
+  ],
+  "spotify": {
+    "embedUrl": "https://open.spotify.com/embed/artist/4lh8DxiDGdWTett6BeijVi?utm_source=generator&theme=0"
+  },
+  "videos": [
+    {
+      "id": "video1",
+      "url": "https://www.youtube.com/embed/vh7pPZAnjDc?si=DDO_hYQ0YwQ4VV3q"
+    },
+    {
+      "id": "video2",
+      "url": "https://www.youtube.com/embed/m6cXVk8o7P0?si=ef8g0BwKw0pHwTsT"
+    }
+  ]
+}
