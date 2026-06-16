@@ -1,5 +1,5 @@
 ---
-
+// AnubisReal
 ---
 
 <html lang="es">
@@ -7,850 +7,328 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>AnubisReal</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div class="circle"></div>
-		<div class="character-container">
-			<div class="character magic-sphere"></div>
-			<div class="character dead"></div>
-		</div>
-		<nav class="navbar">
-			<a href="#" class="nav-item active">Follow Me</a>
-			<a href="#" class="nav-item">Music</a>
-			<a href="#" class="nav-item">Videos</a>
-			<a href="#" class="nav-item">Projects</a>
-		</nav>
 
-		<div class="tab-content active" data-tab="follow-me">
-			<div class="social-container">
-				<div class="social-card">
-					<div class="card-content">
-						<div class="card-header">
-							<div class="profile-pic"></div>
-							<svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-								<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-								<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-							</svg>
-						</div>
-						<div class="card-info">
-							<span class="username">@badboybmb</span>
-							<div class="stats">
-								<span><strong>16.6K</strong> Seguidores</span>
-								<span><strong>2.7K</strong> Siguiendo</span>
-							</div>
-						</div>
-					</div>
-					<a href="https://instagram.com/badboybmb" target="_blank" rel="noopener noreferrer" class="visit-button">Visitar</a>
+		<div class="sticky-wrapper">
+			<section class="section">
+
+				<!-- TikTok (capa inferior) -->
+				<a href="https://tiktok.com/@anubisreal" target="_blank" rel="noopener noreferrer" class="social-link" id="ttLink">
+					<svg class="social-svg" id="ttSvg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z" fill="currentColor"/>
+					</svg>
+				</a>
+
+				<!-- Instagram (capa superior) -->
+				<a href="https://instagram.com/badboybmb" target="_blank" rel="noopener noreferrer" class="social-link" id="igLink">
+					<svg class="social-svg" id="igSvg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" fill="currentColor"/>
+					</svg>
+				</a>
+
+				<h1 class="main-text" id="mainText" aria-label="Sígueme"></h1>
+
+				<div class="scroll-indicator" id="scrollIndicator">
+					<svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="1" y="1" width="22" height="34" rx="11" stroke="#0a0a0a" stroke-width="2" stroke-opacity="0.3"/>
+						<circle class="scroll-dot" cx="12" cy="10" r="3" fill="#0a0a0a" fill-opacity="0.3"/>
+					</svg>
 				</div>
 
-				<div class="social-card">
-					<div class="card-content">
-						<div class="card-header">
-							<div class="profile-pic"></div>
-							<svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-							</svg>
-						</div>
-						<div class="card-info">
-							<span class="username">@badboymtz</span>
-							<div class="stats">
-								<span><strong>420</strong> Seguidores</span>
-								<span><strong>273</strong> Siguiendo</span>
-							</div>
-						</div>
-					</div>
-					<a href="https://www.tiktok.com/@badboymtz" target="_blank" rel="noopener noreferrer" class="visit-button">Visitar</a>
-				</div>
-
-				<div class="social-card">
-					<div class="card-content">
-						<div class="card-header">
-							<div class="profile-pic"></div>
-							<svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-							</svg>
-						</div>
-						<div class="card-info">
-							<span class="username">@anubisreal23</span>
-							<div class="stats">
-								<span><strong>780</strong> Seguidores</span>
-								<span><strong>29</strong> Siguiendo</span>
-							</div>
-						</div>
-					</div>
-					<a href="https://x.com/anubisreal23" target="_blank" rel="noopener noreferrer" class="visit-button">Visitar</a>
-				</div>
-
-				<div class="social-card">
-					<div class="card-content">
-						<div class="card-header">
-							<div class="profile-pic"></div>
-							<svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-							</svg>
-						</div>
-						<div class="card-info">
-							<span class="username">AnubisReal</span>
-							<div class="stats">
-								<span><strong>694</strong> Seguidores</span>
-								<span><strong>0</strong> Siguiendo</span>
-							</div>
-						</div>
-					</div>
-					<a href="https://www.facebook.com/anubisreal/" target="_blank" rel="noopener noreferrer" class="visit-button">Visitar</a>
-				</div>
-
-				<div class="social-card">
-					<div class="card-content">
-						<div class="card-header">
-							<div class="profile-pic"></div>
-							<svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-							</svg>
-						</div>
-						<div class="card-info">
-							<span class="username">AnubisReal</span>
-							<div class="stats">
-								<span><strong>1.2K</strong> Suscriptores</span>
-								<span><strong>89</strong> Videos</span>
-							</div>
-						</div>
-					</div>
-					<a href="https://www.youtube.com/@AnubisReal" target="_blank" rel="noopener noreferrer" class="visit-button">Visitar</a>
-				</div>
-			</div>
+			</section>
 		</div>
 
-		<div class="tab-content" data-tab="music">
-			<div class="spotify-container">
-				<iframe 
-					data-testid="embed-iframe" 
-					style="border-radius:12px" 
-					src="https://open.spotify.com/embed/artist/4lh8DxiDGdWTett6BeijVi?utm_source=generator&theme=0" 
-					width="100%" 
-					height="500" 
-					frameBorder="0" 
-					allowfullscreen="" 
-					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-					loading="lazy">
-				</iframe>
-			</div>
-		</div>
-
-		<div class="tab-content" data-tab="videos">
-			<div class="videos-container">
-				<div class="video-item">
-					<iframe 
-						src="https://www.youtube.com/embed/vh7pPZAnjDc?si=DDO_hYQ0YwQ4VV3q" 
-						title="YouTube video player" 
-						frameborder="0" 
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						referrerpolicy="strict-origin-when-cross-origin" 
-						allowfullscreen>
-					</iframe>
-				</div>
-				<div class="video-item">
-					<iframe 
-						src="https://www.youtube.com/embed/m6cXVk8o7P0?si=ef8g0BwKw0pHwTsT" 
-						title="YouTube video player" 
-						frameborder="0" 
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						referrerpolicy="strict-origin-when-cross-origin" 
-						allowfullscreen>
-					</iframe>
-				</div>
-			</div>
-		</div>
-
-		<div class="tab-content" data-tab="projects">
-			<!-- Contenido de Projects -->
-		</div>
 	</body>
 </html>
 
-<script>
-	// Cargar datos desde localStorage si existen
-	async function loadDataAndUpdate() {
-		let data;
-		const localData = localStorage.getItem('anubisreal-data');
-		
-		if (localData) {
-			data = JSON.parse(localData);
-			console.log('Datos cargados desde localStorage');
-		} else {
-			// Cargar desde data.json si no hay datos locales
-			try {
-				const response = await fetch('/data.json');
-				data = await response.json();
-			} catch (error) {
-				console.log('No se pudo cargar data.json, usando datos por defecto');
-				return;
-			}
-		}
-		
-		// Actualizar las cards de redes sociales
-		if (data.socialCards) {
-			const socialCards = document.querySelectorAll('.social-card');
-			data.socialCards.forEach((cardData, index) => {
-				if (socialCards[index]) {
-					const card = socialCards[index];
-					const username = card.querySelector('.username');
-					const stats = card.querySelector('.stats');
-					const visitButton = card.querySelector('.visit-button');
-					const profilePic = card.querySelector('.profile-pic');
-					
-					if (username) username.textContent = cardData.username;
-					if (stats) {
-						const spans = stats.querySelectorAll('span');
-						if (spans[0]) spans[0].innerHTML = `<strong>${cardData.followers}</strong> Seguidores`;
-						if (spans[1]) spans[1].innerHTML = `<strong>${cardData.following}</strong> Siguiendo`;
-					}
-					if (visitButton && cardData.url) {
-						visitButton.href = cardData.url;
-					}
-					if (profilePic && cardData.profileImage) {
-						profilePic.style.backgroundImage = `url(${cardData.profileImage})`;
-						profilePic.style.backgroundSize = 'cover';
-						profilePic.style.backgroundPosition = 'center';
-					}
-				}
-			});
-		}
-		
-		// Actualizar Spotify
-		if (data.spotify && data.spotify.embedUrl) {
-			const spotifyIframe = document.querySelector('.spotify-container iframe');
-			if (spotifyIframe) {
-				spotifyIframe.src = data.spotify.embedUrl;
-			}
-		}
-		
-		// Actualizar videos
-		if (data.videos) {
-			const videosContainer = document.querySelector('[data-tab="videos"] .videos-container');
-			if (videosContainer) {
-				videosContainer.innerHTML = data.videos.map(video => `
-					<div class="video-item">
-						<iframe 
-							src="${video.url}" 
-							title="YouTube video player" 
-							frameborder="0" 
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-							referrerpolicy="strict-origin-when-cross-origin" 
-							allowfullscreen>
-						</iframe>
-					</div>
-				`).join('');
-			}
-		}
-	}
-	
-	// Cargar datos al iniciar
-	loadDataAndUpdate();
-	
-	// Escuchar cambios en localStorage (para actualizar en tiempo real si se abre en otra pestaña)
-	window.addEventListener('storage', (e) => {
-		if (e.key === 'anubisreal-data') {
-			loadDataAndUpdate();
-		}
-	});
-
-	document.querySelectorAll('.nav-item').forEach(item => {
-		item.addEventListener('click', (e) => {
-			e.preventDefault();
-			
-			// Remover active de todos los nav-items
-			document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
-			item.classList.add('active');
-			
-			// Obtener el texto del nav-item para saber qué pestaña activar
-			const tabName = item.textContent.trim().toLowerCase().replace(' ', '-');
-			
-			// Ocultar todos los tab-content
-			document.querySelectorAll('.tab-content').forEach(tab => {
-				tab.classList.remove('active');
-			});
-			
-			// Mostrar el tab-content correspondiente
-			const activeTab = document.querySelector(`.tab-content[data-tab="${tabName}"]`);
-			if (activeTab) {
-				activeTab.classList.add('active');
-			}
-		});
-	});
-
-	// Manejo de tarjetas sociales para móvil
-	const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-	
-	if (isTouchDevice) {
-		const socialCards = document.querySelectorAll('.social-card');
-		
-		socialCards.forEach(card => {
-			card.addEventListener('click', (e) => {
-				// Si el clic es en el botón visitar, dejar que funcione normalmente
-				if (e.target.classList.contains('visit-button')) {
-					return;
-				}
-				
-				// Prevenir el comportamiento por defecto
-				e.preventDefault();
-				e.stopPropagation();
-				
-				// Remover la clase active de todas las demás tarjetas
-				socialCards.forEach(c => {
-					if (c !== card) {
-						c.classList.remove('active');
-					}
-				});
-				
-				// Toggle de la clase active en la tarjeta actual
-				card.classList.toggle('active');
-			});
-		});
-		
-		// Cerrar tarjetas al tocar fuera
-		document.addEventListener('click', (e) => {
-			if (!e.target.closest('.social-card')) {
-				socialCards.forEach(card => card.classList.remove('active'));
-			}
-		});
-	}
-
-	// Animación aleatoria de los personajes
-	const magicSphere = document.querySelector('.magic-sphere');
-	const dead = document.querySelector('.dead');
-	let currentFrame = 0;
-	let isAnimating = false;
-	let animationTimeout;
-
-	function animateCharacters() {
-		if (isAnimating) return;
-		isAnimating = true;
-
-		// Mostrar y animar magic sphere
-		magicSphere.style.opacity = '1';
-		dead.style.opacity = '0';
-		
-		let sphereFrame = 0;
-		const sphereInterval = setInterval(() => {
-			magicSphere.style.backgroundPosition = `-${sphereFrame * 128}px 0`;
-			sphereFrame++;
-			
-			if (sphereFrame >= 16) {
-				clearInterval(sphereInterval);
-				
-				// Ocultar sphere y mostrar dead
-				magicSphere.style.opacity = '0';
-				dead.style.opacity = '1';
-				
-				let deadFrame = 0;
-				const deadInterval = setInterval(() => {
-					dead.style.backgroundPosition = `-${deadFrame * 128}px 0`;
-					deadFrame++;
-					
-					if (deadFrame >= 4) {
-						clearInterval(deadInterval);
-						
-						// Ocultar dead después de completar
-						setTimeout(() => {
-							dead.style.opacity = '0';
-							isAnimating = false;
-							
-							// Programar siguiente aparición aleatoria (5-10 segundos)
-							const randomDelay = Math.random() * 5000 + 5000;
-							animationTimeout = setTimeout(animateCharacters, randomDelay);
-						}, 100);
-					}
-				}, 150); // 0.15s por frame
-			}
-		}, 150); // 0.15s por frame
-	}
-
-	// Iniciar la primera animación al cargar
-	setTimeout(animateCharacters, 500);
-
-</script>
-
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	html, body {
-		height: 100%;
-		width: 100%;
-	}
+	* { margin: 0; padding: 0; box-sizing: border-box; }
 
 	body {
-		background: #0B0C0E;
-		position: relative;
-		overflow: hidden;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-
-	.circle {
-		position: absolute;
-		bottom: -300px;
-		left: 50%;
-		transform: translateX(-50%) scaleX(0.6);
-		width: 600px;
-		height: 600px;
-		background: radial-gradient(circle, #47C675 0%, rgba(71, 198, 117, 0.8) 30%, rgba(71, 198, 117, 0.4) 60%, transparent 100%);
-		border-radius: 50%;
-		filter: blur(150px);
-		-webkit-filter: blur(150px);
-		will-change: transform;
-		z-index: 1;
-	}
-
-	.character-container {
-		position: fixed;
-		bottom: 75%;
-		left: 50%;
-		transform: translate(-50%, -50px);
-		width: 128px;
-		height: 128px;
-		z-index: 101;
-		pointer-events: none;
-	}
-
-	.character {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 128px;
-		height: 128px;
-		background-repeat: no-repeat;
-		image-rendering: pixelated;
-		image-rendering: -moz-crisp-edges;
-		image-rendering: crisp-edges;
-	}
-
-	.magic-sphere {
-		background-image: url('/Magic_sphere.png');
-		background-size: 2048px 128px;
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
-
-	.dead {
-		background-image: url('/Dead.png');
-		background-size: 512px 128px;
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
-
-
-	.navbar {
-		position: fixed;
-		bottom: 75%;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 85%;
-		max-width: 360px;
-		height: 46px;
-		background: rgba(255, 255, 255, 0.05);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 50px;
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		padding: 0 3px;
-		will-change: transform;
-		z-index: 100;
-	}
-
-	.nav-item {
-		color: rgba(255, 255, 255, 0.8);
-		text-decoration: none;
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-		font-size: 11px;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-		padding: 12.50px 12.00px;
-		border-radius: 20px;
-		transform: scale(1);
-	}
-
-	.nav-item:hover {
-		color: #ffffff;
-		background: rgba(71, 198, 117, 0.2);
-		transform: scale(1.05);
-	}
-
-	.nav-item.active {
-		background: #ffffff;
-		color: #0B0C0E;
-		transform: scale(1.08);
-		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-	}
-
-	.social-container {
-		position: fixed;
-		top: 0;
-		left: 30px;
 		width: 100%;
-		height: 100%;
-		z-index: 10;
-		pointer-events: none;
+		background: #ffffff;
+		font-family: 'Space Grotesk', sans-serif;
+		overflow-x: hidden;
 	}
 
-	.social-card {
-		position: absolute;
+	.sticky-wrapper { height: 800vh; }
+
+	.section {
+		position: sticky;
+		top: 0;
+		width: 100%;
+		height: 100vh;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 0;
-		width: 130px;
-		height: 130px;
-		background: rgba(255, 255, 255, 0.08);
-		backdrop-filter: blur(15px);
-		-webkit-backdrop-filter: blur(15px);
-		border: 1px solid rgba(255, 255, 255, 0.15);
-		border-radius: 14px;
-		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-		cursor: default;
-		pointer-events: all;
 		overflow: hidden;
-		will-change: transform;
-		-webkit-transform: translateZ(0);
-		transform: translateZ(0);
 	}
 
-	.card-content {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		width: 100%;
-		height: 100%;
-		padding: 12px;
-		transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	.social-svg {
+		width: 400px;
+		height: 400px;
+		display: block;
+		-webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 80%);
+		mask-image: linear-gradient(to bottom, black 20%, transparent 80%);
 	}
 
-	.visit-button {
+	.social-link {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(-20deg);
+		color: rgb(220, 220, 220);
+		z-index: 1;
+		opacity: 0.15;
+	}
+
+	#ttLink { z-index: 1; }
+	#igLink { z-index: 2; }
+
+	.main-text {
+		font-size: clamp(48px, 10vw, 110px);
+		font-weight: 700;
+		color: #0a0a0a;
+		letter-spacing: -4px;
+		text-transform: uppercase;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		padding: 8px 20px;
-		background: #ffffff;
-		color: #0B0C0E;
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-		font-size: 11px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.5px;
-		border-radius: 20px;
-		text-decoration: none;
-		cursor: pointer;
-		opacity: 0;
+		z-index: 3;
 		pointer-events: none;
-		transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-		z-index: 2;
+		display: flex;
+		overflow: visible;
+		white-space: nowrap;
 	}
 
-	.social-card:hover .visit-button {
-		opacity: 1;
-		pointer-events: all;
+	.main-text .char {
+		display: inline-block;
+		will-change: transform, opacity, filter;
 	}
 
-	.social-card:nth-child(1) {
-		top: 50%;
+	.scroll-indicator {
+		position: absolute;
+		bottom: 44px;
 		left: 50%;
-		transform: translateX(-50%) rotate(-1deg);
+		transform: translateX(-50%);
+		z-index: 4;
 	}
 
-	.social-card:nth-child(2) {
-		top: 30%;
-		right: 10%;
-		transform: rotate(2deg);
-	}
+	.scroll-indicator svg { width: 22px; height: 34px; }
 
-	.social-card:nth-child(3) {
-		top: 35%;
-		left: 8%;
-		transform: rotate(-3deg);
-	}
+	.scroll-dot { animation: scrolldown 1.8s ease infinite; }
 
-	.social-card:nth-child(4) {
-		bottom: 15%;
-		left: 8%;
-		transform: rotate(3deg);
-	}
-
-	.social-card:nth-child(5) {
-		bottom: 15%;
-		right: 8%;
-		transform: rotate(-2deg);
-	}
-
-	.card-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-
-	.profile-pic {
-		width: 34px;
-		height: 34px;
-		border-radius: 50%;
-		background: linear-gradient(135deg, rgba(71, 198, 117, 0.3), rgba(71, 198, 117, 0.1));
-		border: 2px solid rgba(255, 255, 255, 0.2);
-	}
-
-	.platform-icon {
-		width: 16px;
-		height: 16px;
-		color: rgba(255, 255, 255, 0.6);
-		flex-shrink: 0;
-	}
-
-	.card-info {
-		display: flex;
-		flex-direction: column;
-		gap: 7px;
-	}
-
-	.username {
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-		font-size: 12px;
-		font-weight: 600;
-		color: rgba(255, 255, 255, 0.95);
-		letter-spacing: 0.1px;
-	}
-
-	.stats {
-		display: flex;
-		flex-direction: row;
-		gap: 10px;
-		font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-		font-size: 9px;
-		color: rgba(255, 255, 255, 0.65);
-		line-height: 1.3;
-	}
-
-	.stats span {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.stats strong {
-		color: rgba(255, 255, 255, 0.95);
-		font-weight: 700;
-		font-size: 15px;
-		display: block;
-		margin-bottom: 2px;
-	}
-
-	.social-card:hover {
-		background: rgba(255, 255, 255, 0.08);
-		border-color: rgba(255, 255, 255, 0.15);
-		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
-	}
-
-	.social-card:hover .card-content {
-		filter: blur(8px);
-	}
-
-	.social-card:hover .visit-button {
-		opacity: 1;
-		pointer-events: all;
-	}
-
-	/* Estilos para móvil con clase active */
-	.social-card.active {
-		background: rgba(255, 255, 255, 0.08);
-		border-color: rgba(255, 255, 255, 0.15);
-		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
-	}
-
-	.social-card.active .card-content {
-		filter: blur(8px);
-		-webkit-filter: blur(8px);
-	}
-
-	.social-card.active .visit-button {
-		opacity: 1;
-		pointer-events: all;
-	}
-
-	.social-card:nth-child(1):hover {
-		transform: translateX(-50%) translateY(-4px) rotate(-1deg);
-	}
-
-	.social-card:nth-child(2):hover {
-		transform: translateY(-4px) rotate(2deg);
-	}
-
-	.social-card:nth-child(3):hover {
-		transform: translateY(-4px) rotate(-3deg);
-	}
-
-	.social-card:nth-child(4):hover {
-		transform: translateY(-4px) rotate(3deg);
-	}
-
-	.social-card:nth-child(5):hover {
-		transform: translateY(-4px) rotate(-2deg);
-	}
-
-	/* Animaciones para móvil con clase active */
-	.social-card:nth-child(1).active {
-		transform: translateX(-50%) translateY(-4px) rotate(-1deg);
-	}
-
-	.social-card:nth-child(2).active {
-		transform: translateY(-4px) rotate(2deg);
-	}
-
-	.social-card:nth-child(3).active {
-		transform: translateY(-4px) rotate(-3deg);
-	}
-
-	.social-card:nth-child(4).active {
-		transform: translateY(-4px) rotate(3deg);
-	}
-
-	.social-card:nth-child(5).active {
-		transform: translateY(-4px) rotate(-2deg);
-	}
-
-	.social-card:hover .platform-icon {
-		color: rgba(255, 255, 255, 0.6);
-	}
-
-	.social-card:hover .profile-pic {
-		border-color: rgba(255, 255, 255, 0.2);
-	}
-
-	.social-card.active .platform-icon {
-		color: rgba(255, 255, 255, 0.6);
-	}
-
-	.social-card.active .profile-pic {
-		border-color: rgba(255, 255, 255, 0.2);
-	}
-
-	.tab-content {
-		display: none;
-	}
-
-	.tab-content.active {
-		display: block;
-	}
-
-	.spotify-container {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -30%);
-		width: 60%;
-		max-width: 500px;
-		min-width: 350px;
-		z-index: 10;
-	}
-
-	.spotify-container iframe {
-		display: block;
-	}
-
-	.videos-container {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -30%);
-		width: 60%;
-		max-width: 700px;
-		z-index: 10;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
-		max-height: 80vh;
-		overflow-y: auto;
-		padding: 0;
-	}
-
-	.video-item {
-		width: 100%;
-		aspect-ratio: 16 / 9;
-		background: rgba(255, 255, 255, 0.08);
-		backdrop-filter: blur(15px);
-		-webkit-backdrop-filter: blur(15px);
-		border: 1px solid rgba(255, 255, 255, 0.15);
-		border-radius: 14px;
-		padding: 10px;
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-		box-sizing: border-box;
-	}
-
-	.video-item iframe {
-		width: 100%;
-		height: 100%;
-		border-radius: 8px;
-		border: none;
-	}
-
-	@media (max-width: 480px) {
-		.social-container {
-			grid-template-columns: 1fr;
-			gap: 10px;
-			max-width: 340px;
-		}
-		
-		.social-card {
-			min-height: 120px;
-		}
-
-		/* Bajar solo la del medio y las dos de abajo */
-		.social-card:nth-child(1) {
-			top: 55%;
-		}
-
-		.social-card:nth-child(4) {
-			bottom: 8%;
-		}
-
-		.social-card:nth-child(5) {
-			bottom: 8%;
-		}
-
-		.videos-container {
-			width: 90%;
-			transform: translate(-50%, -35%);
-		}
-	}
-
-	/* Fallback para Safari iOS que no soporta bien backdrop-filter */
-	@supports not (backdrop-filter: blur(10px)) {
-		.navbar {
-			background: rgba(20, 20, 25, 0.85);
-		}
-		
-		.social-card {
-			background: rgba(30, 30, 35, 0.75);
-		}
-	}
-
-	/* Mejoras adicionales para Safari iOS */
-	@media screen and (-webkit-min-device-pixel-ratio: 2) {
-		.circle {
-			transform: translateX(-50%) scaleX(0.6) translateZ(0);
-			-webkit-transform: translateX(-50%) scaleX(0.6) translateZ(0);
-		}
+	@keyframes scrolldown {
+		0%   { transform: translateY(0);    opacity: 1; }
+		80%  { transform: translateY(12px); opacity: 0; }
+		100% { transform: translateY(0);    opacity: 0; }
 	}
 </style>
+
+<script>
+	function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
+	function clamp(v: number, a: number, b: number) { return Math.min(Math.max(v, a), b); }
+	function ease(t: number) { return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2; }
+
+	function measureText(text: string) {
+		const el = document.createElement('h1');
+		el.style.cssText = `position:absolute;visibility:hidden;pointer-events:none;font-size:clamp(48px,10vw,110px);font-weight:700;letter-spacing:-4px;text-transform:uppercase;font-family:'Space Grotesk',sans-serif;white-space:nowrap;`;
+		el.textContent = text;
+		document.body.appendChild(el);
+		const w = el.offsetWidth, h = el.offsetHeight;
+		document.body.removeChild(el);
+		return { w, h };
+	}
+
+	function buildChars(container: HTMLElement, text: string) {
+		container.innerHTML = '';
+		container.style.transform = 'translate(-50%, -50%)';
+		return text.split('').map((ch: string) => {
+			const s = document.createElement('span');
+			s.className = 'char';
+			s.textContent = ch;
+			s.style.cssText = 'opacity:1;transform:none;filter:none;display:inline-block;';
+			container.appendChild(s);
+			return s;
+		});
+	}
+
+	const wrapper   = document.querySelector('.sticky-wrapper') as HTMLElement;
+	const igLink    = document.getElementById('igLink') as HTMLElement;
+	const igSvg     = document.getElementById('igSvg') as HTMLElement;
+	const ttLink    = document.getElementById('ttLink') as HTMLElement;
+	const ttSvg     = document.getElementById('ttSvg') as HTMLElement;
+	const mainText  = document.getElementById('mainText') as HTMLElement;
+	const indicator = document.getElementById('scrollIndicator') as HTMLElement;
+
+	const TEXT_SIGUEME   = 'Sígueme';
+	const TEXT_ANUBIS    = 'AnubisReal';
+	const TEXT_BADBOY    = 'badboymtz';
+
+	// Medir textos
+	const { w: wAnubis, h: hAnubis } = measureText(TEXT_ANUBIS);
+	const { w: wBadboy } = measureText(TEXT_BADBOY);
+	const FINAL_SIZE     = hAnubis * 0.88;
+	const GAP            = 4;
+	const totalW         = FINAL_SIZE + GAP + wAnubis;
+	const linkFinalX     = -(totalW / 2) + FINAL_SIZE / 2;
+	const textFinalX     = totalW / 2 - wAnubis / 2;
+	const totalWBadboy   = FINAL_SIZE + GAP + wBadboy;
+	const ttLinkFinalX   = -(totalWBadboy / 2) + FINAL_SIZE / 2;
+	const textFinalXBadboy = totalWBadboy / 2 - wBadboy / 2;
+
+	let charsA: HTMLElement[] = buildChars(mainText, TEXT_SIGUEME);
+	let charsB: HTMLElement[] = [];
+	let phase = 'A'; // A=sígueme, B=anubisreal-ig, C=tiktok-bg, D=anubisreal-tt
+
+	// Estado inicial TikTok: oculto
+	ttLink.style.opacity = '0';
+
+	function onScroll() {
+		const scrolled    = -wrapper.getBoundingClientRect().top;
+		const totalScroll = wrapper.offsetHeight - window.innerHeight;
+		const raw         = clamp(scrolled / totalScroll, 0, 1);
+
+		// ─── BLOQUE 1: Instagram (raw 0 → 0.5) ───
+		const b1   = clamp(raw / 0.5, 0, 1);
+		const p1a  = clamp(b1 / 0.4, 0, 1);
+		const ep1a = ease(p1a);
+		const p1b  = clamp((b1 - 0.4) / 0.6, 0, 1);
+		const ep1b = ease(p1b);
+		const p1c  = clamp((b1 - 0.7) / 0.3, 0, 1);
+
+		// ─── BLOQUE 2: TikTok (raw 0.5 → 1) ───
+		const b2   = clamp((raw - 0.5) / 0.5, 0, 1);
+		const p2a  = clamp(b2 / 0.4, 0, 1);
+		const ep2a = ease(p2a);
+		const p2b  = clamp((b2 - 0.4) / 0.6, 0, 1);
+		const ep2b = ease(p2b);
+		const p2c  = clamp((b2 - 0.7) / 0.3, 0, 1);
+
+		// ─── GESTIÓN DE FASES (con reversiones) ───
+		if (p2c > 0 && phase === 'B') {
+			// Avanzar B → C
+			phase = 'C';
+			mainText.innerHTML = '';
+			mainText.style.transform = `translate(calc(-50% + ${textFinalXBadboy}px), -50%)`;
+			charsB = TEXT_BADBOY.split('').map((ch: string) => {
+				const s = document.createElement('span');
+				s.className = 'char'; s.textContent = ch;
+				s.style.cssText = 'opacity:0;transform:translateY(30px) scale(0.8);filter:blur(10px);display:inline-block;';
+				mainText.appendChild(s); return s;
+			});
+		} else if (p2c === 0 && b2 < 0.7 && phase === 'C') {
+			// Revertir C → B
+			phase = 'B';
+			mainText.innerHTML = '';
+			mainText.style.transform = `translate(calc(-50% + ${textFinalX}px), -50%)`;
+			charsB = TEXT_ANUBIS.split('').map((ch: string) => {
+				const s = document.createElement('span');
+				s.className = 'char'; s.textContent = ch;
+				s.style.cssText = 'opacity:1;transform:none;filter:none;display:inline-block;';
+				mainText.appendChild(s); return s;
+			});
+		}
+
+		if (p1c > 0 && phase === 'A') {
+			// Avanzar A → B
+			phase = 'B';
+			mainText.innerHTML = '';
+			mainText.style.transform = `translate(calc(-50% + ${textFinalX}px), -50%)`;
+			charsB = TEXT_ANUBIS.split('').map((ch: string) => {
+				const s = document.createElement('span');
+				s.className = 'char'; s.textContent = ch;
+				s.style.cssText = 'opacity:0;transform:translateY(30px) scale(0.8);filter:blur(10px);display:inline-block;';
+				mainText.appendChild(s); return s;
+			});
+		} else if (p1c === 0 && b1 < 0.7 && phase === 'B' && b2 === 0) {
+			// Revertir B → A
+			phase = 'A';
+			charsA = buildChars(mainText, TEXT_SIGUEME);
+		}
+
+		// ─── RENDER ───
+
+		// Instagram SVG mask
+		igSvg.style.maskImage = `linear-gradient(to bottom, black ${lerp(20,100,ep1a)}%, transparent ${lerp(80,100,ep1a)}%)`;
+
+		// Instagram tamaño y posición
+		igSvg.style.width  = lerp(400, FINAL_SIZE, ep1b) + 'px';
+		igSvg.style.height = lerp(400, FINAL_SIZE, ep1b) + 'px';
+		const igRot = b1 <= 0.4 ? lerp(-20, 0, ep1a) : 0;
+		igLink.style.transform = `translate(calc(-50% + ${lerp(0, linkFinalX, ep1b)}px), -50%) rotate(${igRot}deg)`;
+
+		if (b1 <= 0.4) {
+			const c = Math.round(lerp(220, 10, ep1a));
+			igLink.style.color   = `rgb(${c},${c},${c})`;
+			igLink.style.opacity = b2 > 0 ? String(lerp(1, 0, ease(clamp(b2 * 3, 0, 1)))) : '0.15';
+		} else {
+			igLink.style.color   = `rgba(0,0,0,${lerp(0.6,1,ep1b)})`;
+			igLink.style.opacity = b2 > 0 ? String(lerp(1, 0, ease(clamp(b2 * 3, 0, 1)))) : String(lerp(0.15, 1, ep1b));
+		}
+
+		// Texto fase A (Sígueme dispersándose)
+		if (phase === 'A') {
+			charsA.forEach((c: HTMLElement, i: number) => {
+				const delay = i / charsA.length;
+				const cp    = clamp((p1b - delay * 0.4) / 0.6, 0, 1);
+				const ecp   = ease(cp);
+				const dir   = i % 2 === 0 ? 1 : -1;
+				c.style.transform = `translateY(${-ecp*40}px) translateX(${dir*ecp*20}px) scale(${1-ecp*0.5})`;
+				c.style.opacity   = String(1 - ecp);
+				c.style.filter    = `blur(${ecp*8}px)`;
+			});
+		}
+
+		// Texto fase B (AnubisReal entrando)
+		if (phase === 'B') {
+			const progress = b2 === 0 ? p1c : 1;
+			charsB.forEach((c: HTMLElement, i: number) => {
+				const delay = i / charsB.length;
+				const cp    = clamp((progress - delay * 0.5) / 0.5, 0, 1);
+				const ecp   = ease(cp);
+				c.style.transform = `translateY(${(1-ecp)*30}px) scale(${0.8+ecp*0.2})`;
+				c.style.opacity   = String(ecp);
+				c.style.filter    = `blur(${(1-ecp)*10}px)`;
+			});
+		}
+
+		// Texto fase C (badboymtz entrando)
+		if (phase === 'C') {
+			charsB.forEach((c: HTMLElement, i: number) => {
+				const delay = i / charsB.length;
+				const cp    = clamp((p2c - delay * 0.5) / 0.5, 0, 1);
+				const ecp   = ease(cp);
+				c.style.transform = `translateY(${(1-ecp)*30}px) scale(${0.8+ecp*0.2})`;
+				c.style.opacity   = String(ecp);
+				c.style.filter    = `blur(${(1-ecp)*10}px)`;
+			});
+		}
+
+		// TikTok SVG mask
+		ttSvg.style.maskImage = `linear-gradient(to bottom, black ${lerp(20,100,ep2a)}%, transparent ${lerp(80,100,ep2a)}%)`;
+
+		// TikTok tamaño y posición
+		ttSvg.style.width  = lerp(400, FINAL_SIZE, ep2b) + 'px';
+		ttSvg.style.height = lerp(400, FINAL_SIZE, ep2b) + 'px';
+		const ttRot = b2 <= 0.4 ? lerp(-20, 0, ep2a) : 0;
+		ttLink.style.transform = `translate(calc(-50% + ${lerp(0, ttLinkFinalX, ep2b)}px), -50%) rotate(${ttRot}deg)`;
+
+		if (b2 <= 0.4) {
+			const c = Math.round(lerp(220, 10, ep2a));
+			ttLink.style.color   = `rgb(${c},${c},${c})`;
+			ttLink.style.opacity = String(lerp(0, 0.15, ease(clamp(b2/0.1, 0, 1))));
+		} else {
+			ttLink.style.color   = `rgba(0,0,0,${lerp(0.6,1,ep2b)})`;
+			ttLink.style.opacity = String(lerp(0.15, 1, ep2b));
+		}
+
+		indicator.style.opacity = String(clamp(1 - raw * 4, 0, 1));
+	}
+
+	window.addEventListener('scroll', onScroll, { passive: true });
+	onScroll();
+</script>
